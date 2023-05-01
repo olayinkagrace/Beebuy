@@ -1,0 +1,22 @@
+.site-container {
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product{
+  border: 1px #404040 solid;
+  margin: 16px;
+}
+.product img {
+  width: 100%;
+  max-width: 220px;
+}
+.product-info{
+  padding: 16px;
+}
