@@ -33,7 +33,7 @@ function SigninScreen() {
       });
       ctxDispatch({ type: "USER_SIGNIN", payload: data });
       localStorage.setItem("userInfo", JSON.stringify(data));
-      navigate("/shipping" || "/");
+      navigate("/" || "/shipping");
     } catch (error) {
       toast.error(getError(error));
     }
