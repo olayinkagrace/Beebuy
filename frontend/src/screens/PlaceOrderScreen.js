@@ -49,7 +49,7 @@ function PlaceOrderScreen() {
       dispatch({ type: "CREATE_REQUEST" });
 
       const { data } = await Axios.post(
-        "http://localhost:5000/api/orders",
+        "https://beebuy.onrender.com/api/orders",
         {
           orderItems: cart.cartItems,
           shippingAddress: cart.shippingAddress,
@@ -67,7 +67,6 @@ function PlaceOrderScreen() {
           },
         }
       );
-      console.log(data);
       ctxDispatch({ type: "CART_CLEAR" });
       dispatch({ type: "CREATE_SUCCESS" });
       localStorage.removeItem("cartItems");

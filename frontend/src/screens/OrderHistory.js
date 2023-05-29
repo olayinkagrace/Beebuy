@@ -37,7 +37,7 @@ function OrderHistory() {
     const fetchData = async () => {
       dispatch({ type: "FETCH_REQUEST" });
       try {
-        const { data } = await axios.get("http://localhost:5000/api/orders/mine", {
+        const { data } = await axios.get("https://beebuy.onrender.com/api/orders/mine", {
           headers: { Authorization: `Bearer ${userInfo.token}` },
         });
         dispatch({ type: "FETCH_SUCCESS", payload: data });

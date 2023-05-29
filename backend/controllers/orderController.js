@@ -35,7 +35,6 @@ const createOrder =   expressAsyncHandler(async (req, res) => {
 const myOrder = expressAsyncHandler(async (req, res) => {
 
   const orders = await Order.find({ user: req.user._id });
-  console.log(req.user._id);
   res.send(orders)
 });
 

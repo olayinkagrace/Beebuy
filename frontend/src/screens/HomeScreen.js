@@ -31,7 +31,7 @@ function HomeScreen() {
     const fetchData = async () => {
       dispatch({ type: "FETCH_REQUEST" });
       try {
-        const result = await axios.get("http://localhost:5000/api/products");
+        const result = await axios.get("https://beebuy.onrender.com/api/products");
         dispatch({ type: "FETCH_SUCCESS", payload: result.data });
       } catch (error) {
         // dispatch({ type: "FETCH_FAIl", payload: error.message });
