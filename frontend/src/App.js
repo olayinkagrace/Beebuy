@@ -6,7 +6,7 @@ import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
-import { Badge, Button, Dropdown, Nav, NavDropdown } from "react-bootstrap";
+import { Badge, Dropdown, Nav, NavDropdown } from "react-bootstrap";
 import { useContext, useEffect, useState } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Store } from "./Store";
@@ -46,7 +46,7 @@ function App() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const { data } = await axios.get(`/api/products/categories`);
+        const { data } = await axios.get(`http://localhost:5000/api/products/categories`);
         setCategories(data);
       } catch (error) {
         toast.error(getError(error));

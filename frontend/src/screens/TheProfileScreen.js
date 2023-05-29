@@ -37,7 +37,7 @@ export default function TheProfileScreen() {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        '/api/users/profile',
+        'http://localhost:5000/api/users/profile',
         {
           name,
           email,

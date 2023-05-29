@@ -4,12 +4,14 @@ const app = express();
 const productRoutes = require("./routes/productRoutes");
 const userRoutes = require("./routes/userRoute");
 const orderRoutes = require("./routes/orderRoute");
-
+const cors = require("cors");
 const mongoose = require("mongoose");
 
 // middleware
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 app.use((req, res, next) => {
   console.log(req.path, req.method);
   next();
